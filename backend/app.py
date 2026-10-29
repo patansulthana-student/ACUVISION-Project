@@ -11,7 +11,7 @@ from backend.core.engine import AcuVisionEngine
 from backend.core.audio import SpatialAudioEngine
 from backend.core.voice import VoiceEngine
 
-import config
+from backend import config
 import threading
 import time
 import cv2
@@ -1648,5 +1648,6 @@ if __name__ == "__main__":
         threaded=True
 
     )
+
 
 
