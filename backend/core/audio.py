@@ -6,7 +6,10 @@ import math
 import struct
 import tempfile
 import wave
-import winsound
+try:
+    import winsound
+except ImportError:
+    winsound = None
 import os
 
 
@@ -278,10 +281,11 @@ class SpatialAudioEngine:
                 filename
             )
 
-            winsound.PlaySound(
-                filename,
-                winsound.SND_FILENAME
-            )
+            if winsound is not None:
+                winsound.PlaySound(
+                    filename,
+                    winsound.SND_FILENAME
+                )
 
         finally:
 
@@ -294,3 +298,4 @@ class SpatialAudioEngine:
             except OSError:
 
                 pass
+
