@@ -1,0 +1,396 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ACUVISION | Proximity & Threat</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+</head>
+
+
+<body>
+
+<main class="page-container">
+
+    <!-- HEADER -->
+
+    <header class="page-header">
+
+        <div>
+
+            <span class="section-label">
+                SAFETY ANALYSIS
+            </span>
+
+            <h1>
+                Proximity & Threat
+            </h1>
+
+            <p class="subtitle">
+                Real-time hazard distance and threat prioritization.
+            </p>
+
+        </div>
+
+
+        <div class="status-badge">
+
+            <span class="status-dot"></span>
+
+            ANALYSIS ACTIVE
+
+        </div>
+
+    </header>
+
+
+
+    <!-- PRIMARY HAZARD -->
+
+    <section class="card threat-main-card">
+
+        <div class="card-header">
+
+            <div>
+
+                <span class="section-label">
+                    PRIMARY HAZARD
+                </span>
+
+                <h2 id="primaryObject">
+                    Vehicle
+                </h2>
+
+            </div>
+
+
+            <span
+                class="threat-level critical"
+                id="primaryLevel">
+
+                CRITICAL
+
+            </span>
+
+        </div>
+
+
+
+        <div class="hazard-details">
+
+            <div class="hazard-detail">
+
+                <span>PROXIMITY</span>
+
+                <strong id="primaryProximity">
+                    VERY CLOSE
+                </strong>
+
+            </div>
+
+
+            <div class="hazard-detail">
+
+                <span>DIRECTION</span>
+
+                <strong id="primaryDirection">
+                    RIGHT
+                </strong>
+
+            </div>
+
+
+            <div class="hazard-detail">
+
+                <span>CONFIDENCE</span>
+
+                <strong id="primaryConfidence">
+                    96%
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- THREAT SCORE -->
+
+        <div class="threat-score-section">
+
+            <div class="score-header">
+
+                <span>
+                    THREAT PRIORITY SCORE
+                </span>
+
+                <strong id="threatScore">
+                    92 / 100
+                </strong>
+
+            </div>
+
+
+            <div class="threat-progress">
+
+                <div
+                    id="threatProgress"
+                    class="threat-progress-fill">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- PROXIMITY -->
+
+    <section class="card proximity-card">
+
+        <div class="card-header">
+
+            <div>
+
+                <span class="section-label">
+                    DISTANCE ESTIMATION
+                </span>
+
+                <h2>
+                    Proximity Level
+                </h2>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="proximity-scale">
+
+            <div class="proximity-step">
+
+                <span>FAR</span>
+
+                <small>
+                    &lt; 20%
+                </small>
+
+            </div>
+
+
+            <div class="proximity-step">
+
+                <span>CLOSE</span>
+
+                <small>
+                    20–45%
+                </small>
+
+            </div>
+
+
+            <div class="proximity-step active">
+
+                <span>VERY CLOSE</span>
+
+                <small>
+                    &gt; 45%
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="proximity-meter">
+
+            <div
+                class="proximity-indicator"
+                id="proximityIndicator">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- OBJECT TABLE -->
+
+    <section class="card">
+
+        <div class="card-header">
+
+            <div>
+
+                <span class="section-label">
+                    MULTI-OBJECT ANALYSIS
+                </span>
+
+                <h2>
+                    Detected Hazards
+                </h2>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="threat-table">
+
+            <div class="threat-table-header">
+
+                <span>OBJECT</span>
+
+                <span>DIRECTION</span>
+
+                <span>PROXIMITY</span>
+
+                <span>CONFIDENCE</span>
+
+                <span>SCORE</span>
+
+            </div>
+
+
+
+            <div class="threat-row">
+
+                <span>👤 Person</span>
+
+                <span>LEFT</span>
+
+                <span>CLOSE</span>
+
+                <span>94%</span>
+
+                <strong>68</strong>
+
+            </div>
+
+
+
+            <div class="threat-row">
+
+                <span>🪑 Chair</span>
+
+                <span>CENTER</span>
+
+                <span>FAR</span>
+
+                <span>91%</span>
+
+                <strong>31</strong>
+
+            </div>
+
+
+
+            <div class="threat-row critical-row">
+
+                <span>🚗 Vehicle</span>
+
+                <span>RIGHT</span>
+
+                <span>VERY CLOSE</span>
+
+                <span>96%</span>
+
+                <strong>92</strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- EXPO DEMO -->
+
+    <section class="card demo-controls">
+
+        <div class="card-header">
+
+            <div>
+
+                <span class="section-label">
+                    EXPO DEMO
+                </span>
+
+                <h2>
+                    Simulate Threat Level
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="direction-buttons">
+
+            <button
+                class="audio-demo-btn"
+                onclick="setThreatDemo('FAR')">
+
+                FAR
+
+            </button>
+
+
+            <button
+                class="audio-demo-btn"
+                onclick="setThreatDemo('CLOSE')">
+
+                CLOSE
+
+            </button>
+
+
+            <button
+                class="audio-demo-btn"
+                onclick="setThreatDemo('VERY CLOSE')">
+
+                VERY CLOSE
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- BACK -->
+
+    <div class="page-navigation">
+
+        <a href="../dashboard.html">
+            ← Back to Dashboard
+        </a>
+
+    </div>
+
+</main>
+
+
+
+<script src="../js/threat.js"></script>
+
+</body>
+
+</html>

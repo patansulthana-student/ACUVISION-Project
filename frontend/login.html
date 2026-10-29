@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ACUVISION | Secure Access</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="login-page">
+
+        <div class="login-card">
+
+            <div class="brand">
+                <div class="brand-icon">◉</div>
+
+                <h1>ACUVISION</h1>
+
+                <p>
+                    Edge-AI Assistive Spatial Navigation
+                </p>
+            </div>
+
+            <div class="login-header">
+                <h2>Caregiver Access</h2>
+
+                <p>
+                    Monitor perception, spatial audio and device status.
+                </p>
+            </div>
+
+            <form id="loginForm">
+
+                <div class="input-group">
+                    <label for="username">Username</label>
+
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="Enter username"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter password"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="login-btn">
+                    Sign In
+                </button>
+
+            </form>
+
+            <div class="divider">
+                <span>OR</span>
+            </div>
+
+            <button
+                class="expo-btn"
+                onclick="startExpoDemo()"
+            >
+                ⚡ Quick Expo Demo
+            </button>
+
+            <p class="demo-text">
+                No account required for project demonstration
+            </p>
+
+            <div class="system-status">
+                <span class="status-dot"></span>
+                ACUVISION EDGE SYSTEM READY
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="js/login.js"></script>
+
+</body>
+</html>

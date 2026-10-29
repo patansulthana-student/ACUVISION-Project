@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>ACUVISION | Device Health</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css">
+
+    <link
+        rel="stylesheet"
+        href="../css/dashboard.css">
+
+    <link
+        rel="stylesheet"
+        href="../css/device-health.css">
+
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css">
+
+</head>
+
+
+<body>
+
+<main class="device-page">
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="device-header">
+
+        <div>
+
+            <div class="device-label">
+                HARDWARE MONITORING
+            </div>
+
+            <h1>
+                Device Health
+            </h1>
+
+            <p>
+                Real-time status of the ACUVISION assistive device.
+            </p>
+
+        </div>
+
+
+        <div
+            class="device-status"
+            id="deviceStatus">
+
+            <span class="status-dot"></span>
+
+            CHECKING
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         OVERALL STATUS
+    ====================================================== -->
+
+    <section class="health-hero">
+
+        <div
+            class="health-icon"
+            id="healthIcon">
+
+            ✓
+
+        </div>
+
+
+        <div>
+
+            <span>
+                OVERALL DEVICE STATUS
+            </span>
+
+            <h2 id="overallStatus">
+                Checking...
+            </h2>
+
+            <p id="overallDescription">
+                Checking connected device components.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         DEVICE COMPONENTS
+    ====================================================== -->
+
+    <section class="health-grid">
+
+
+        <!-- =================================================
+             ESP32-CAM
+        ================================================== -->
+
+        <div class="health-card">
+
+            <div class="health-card-top">
+
+                <div class="component-icon">
+                    CAM
+                </div>
+
+                <span
+                    id="esp32Badge"
+                    class="standby-badge">
+
+                    STANDBY
+
+                </span>
+
+            </div>
+
+
+            <div class="component-name">
+                ESP32-CAM
+            </div>
+
+            <div class="component-description">
+                Primary physical camera
+            </div>
+
+
+            <div
+                id="esp32Value"
+                class="health-value">
+
+                Not Active
+
+            </div>
+
+
+            <div class="health-detail">
+
+                <span>
+                    Connection
+                </span>
+
+                <strong id="esp32Detail">
+                    Not connected
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             CAMERA
+        ================================================== -->
+
+        <div class="health-card">
+
+            <div class="health-card-top">
+
+                <div class="component-icon">
+                    📷
+                </div>
+
+                <span
+                    id="cameraBadge"
+                    class="online-badge">
+
+                    CHECKING
+
+                </span>
+
+            </div>
+
+
+            <div class="component-name">
+                Camera
+            </div>
+
+            <div class="component-description">
+                Current vision input
+            </div>
+
+
+            <div
+                id="cameraValue"
+                class="health-value">
+
+                Checking...
+
+            </div>
+
+
+            <div class="health-detail">
+
+                <span>
+                    Source
+                </span>
+
+                <strong id="cameraSource">
+                    —
+
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             WEBCAM
+        ================================================== -->
+
+        <div class="health-card">
+
+            <div class="health-card-top">
+
+                <div class="component-icon">
+                    USB
+                </div>
+
+                <span
+                    id="webcamBadge"
+                    class="standby-badge">
+
+                    STANDBY
+
+                </span>
+
+            </div>
+
+
+            <div class="component-name">
+                Webcam
+            </div>
+
+            <div class="component-description">
+                Development fallback
+            </div>
+
+
+            <div
+                id="webcamValue"
+                class="health-value">
+
+                Not Active
+
+            </div>
+
+
+            <div class="health-detail">
+
+                <span>
+                    Mode
+                </span>
+
+                <strong id="webcamMode">
+                    Backup
+
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             HEADPHONES
+        ================================================== -->
+
+        <div class="health-card">
+
+            <div class="health-card-top">
+
+                <div class="component-icon">
+                    AUD
+                </div>
+
+                <span
+                    id="headphoneBadge"
+                    class="standby-badge">
+
+                    NOT VERIFIED
+
+                </span>
+
+            </div>
+
+
+            <div class="component-name">
+                Headphones
+            </div>
+
+            <div class="component-description">
+                Spatial audio output
+            </div>
+
+
+            <div
+                id="headphoneValue"
+                class="health-value">
+
+                Not Connected
+
+            </div>
+
+
+            <div class="health-detail">
+
+                <span>
+                    Output
+                </span>
+
+                <strong id="headphoneDetail">
+                    Not verified
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             BATTERY
+        ================================================== -->
+
+        <div class="health-card">
+
+            <div class="health-card-top">
+
+                <div class="component-icon">
+                    BAT
+                </div>
+
+                <span
+                    id="batteryBadge"
+                    class="standby-badge">
+
+                    UNAVAILABLE
+
+                </span>
+
+            </div>
+
+
+            <div class="component-name">
+                Battery
+            </div>
+
+            <div class="component-description">
+                Device power
+            </div>
+
+
+            <div class="health-value">
+
+                <span id="batteryValue">
+                    —
+                </span>
+
+            </div>
+
+
+            <div class="battery-bar">
+
+                <div
+                    id="batteryProgress"
+                    class="battery-progress">
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             BLUETOOTH
+        ================================================== -->
+
+        <div class="health-card">
+
+            <div class="health-card-top">
+
+                <div class="component-icon">
+                    BT
+                </div>
+
+                <span
+                    id="bluetoothBadge"
+                    class="standby-badge">
+
+                    NOT VERIFIED
+
+                </span>
+
+            </div>
+
+
+            <div class="component-name">
+                Bluetooth
+            </div>
+
+            <div class="component-description">
+                Wireless audio link
+            </div>
+
+
+            <div
+                id="bluetoothValue"
+                class="health-value">
+
+                Not Connected
+
+            </div>
+
+
+            <div class="health-detail">
+
+                <span>
+                    Status
+                </span>
+
+                <strong id="bluetoothDetail">
+                    Not verified
+                </strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         TECHNICAL STATUS
+    ====================================================== -->
+
+    <section class="technical-card">
+
+        <div class="section-title">
+
+            <div class="device-label">
+                TECHNICAL STATUS
+            </div>
+
+            <h2>
+                Device Diagnostics
+            </h2>
+
+        </div>
+
+
+        <div class="diagnostic-grid">
+
+
+            <div class="diagnostic">
+
+                <span>
+                    CAMERA STATUS
+                </span>
+
+                <strong id="fpsValue">
+                    —
+                </strong>
+
+            </div>
+
+
+
+            <div class="diagnostic">
+
+                <span>
+                    SIGNAL
+                </span>
+
+                <strong id="signalValue">
+                    N/A
+                </strong>
+
+            </div>
+
+
+
+            <div class="diagnostic">
+
+                <span>
+                    AUDIO LATENCY
+                </span>
+
+                <strong id="audioLatencyValue">
+                    N/A
+                </strong>
+
+            </div>
+
+
+
+            <div class="diagnostic">
+
+                <span>
+                    LAST SYNC
+                </span>
+
+                <strong id="syncTime">
+                    —
+
+                </strong>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ACTIONS
+    ====================================================== -->
+
+    <div class="device-actions">
+
+
+        <a
+            href="../dashboard.html"
+            class="back-button">
+
+            ← BACK TO DASHBOARD
+
+        </a>
+
+
+        <a
+            href="system-health.html"
+            class="next-button">
+
+            SYSTEM HEALTH →
+
+        </a>
+
+
+    </div>
+
+
+</main>
+
+
+
+<script src="../js/api.js"></script>
+
+<script src="../js/device-health.js?v=3"></script>
+
+
+</body>
+
+</html>

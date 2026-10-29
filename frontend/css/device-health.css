@@ -1,0 +1,586 @@
+
+/* =========================================
+   ACUVISION — DEVICE HEALTH
+========================================= */
+
+
+.device-page {
+
+    width: min(1400px, 94%);
+
+    margin: auto;
+
+    padding: 35px 0 60px;
+
+}
+
+
+.device-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+
+}
+
+
+.device-label {
+
+    color: #13d9ef;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.device-header h1 {
+
+    margin: 0;
+
+    font-size: 34px;
+
+}
+
+
+.device-header p {
+
+    color: #718ca3;
+
+    font-size: 13px;
+
+}
+
+
+.device-status {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 11px 16px;
+
+    border: 1px solid #17445c;
+
+    border-radius: 10px;
+
+    color: #00e6a8;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+}
+
+
+.status-dot {
+
+    width: 8px;
+
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #00e6a8;
+
+    box-shadow:
+        0 0 10px rgba(0, 230, 168, .8);
+
+}
+
+
+/* =========================================
+   HEALTH HERO
+========================================= */
+
+.health-hero {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 25px;
+
+    margin-bottom: 22px;
+
+    border: 1px solid rgba(0, 230, 168, .25);
+
+    border-radius: 18px;
+
+    background:
+        rgba(0, 230, 168, .04);
+
+}
+
+
+.health-icon {
+
+    width: 54px;
+
+    height: 54px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background:
+        rgba(0, 230, 168, .12);
+
+    color: #00e6a8;
+
+    font-size: 27px;
+
+    font-weight: 900;
+
+}
+
+
+.health-hero span {
+
+    color: #718ca3;
+
+    font-size: 9px;
+
+    letter-spacing: 1.2px;
+
+}
+
+
+.health-hero h2 {
+
+    margin: 6px 0;
+
+    color: #00e6a8;
+
+}
+
+
+.health-hero p {
+
+    margin: 0;
+
+    color: #718ca3;
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================
+   COMPONENT GRID
+========================================= */
+
+.health-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+
+}
+
+
+.health-card {
+
+    padding: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0a1e30,
+            #061726
+        );
+
+    border: 1px solid #173b56;
+
+    border-radius: 16px;
+
+    transition: .2s;
+
+}
+
+
+.health-card:hover {
+
+    transform: translateY(-3px);
+
+    border-color: #245c76;
+
+}
+
+
+.health-card-top {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.component-icon {
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: #0c2a40;
+
+    color: #13d9ef;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+}
+
+
+.online-badge,
+.standby-badge {
+
+    padding: 5px 9px;
+
+    border-radius: 6px;
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: .8px;
+
+}
+
+
+.online-badge {
+
+    color: #00e6a8;
+
+    background:
+        rgba(0, 230, 168, .08);
+
+}
+
+
+.standby-badge {
+
+    color: #ffb84d;
+
+    background:
+        rgba(255, 184, 77, .08);
+
+}
+
+
+.component-name {
+
+    margin-top: 18px;
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+}
+
+
+.component-description {
+
+    margin-top: 5px;
+
+    color: #718ca3;
+
+    font-size: 11px;
+
+}
+
+
+.health-value {
+
+    margin-top: 18px;
+
+    color: #13d9ef;
+
+    font-size: 19px;
+
+    font-weight: 900;
+
+}
+
+
+.health-detail {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 14px;
+
+    padding-top: 12px;
+
+    border-top: 1px solid #122f44;
+
+}
+
+
+.health-detail span {
+
+    color: #718ca3;
+
+    font-size: 10px;
+
+}
+
+
+.health-detail strong {
+
+    font-size: 10px;
+
+}
+
+
+/* =========================================
+   BATTERY
+========================================= */
+
+.battery-bar {
+
+    height: 6px;
+
+    margin-top: 13px;
+
+    border-radius: 10px;
+
+    background: #102d41;
+
+    overflow: hidden;
+
+}
+
+
+.battery-progress {
+
+    width: 86%;
+
+    height: 100%;
+
+    border-radius: 10px;
+
+    background: #00e6a8;
+
+}
+
+
+/* =========================================
+   TECHNICAL
+========================================= */
+
+.technical-card {
+
+    margin-top: 22px;
+
+    padding: 25px;
+
+    background: #08192b;
+
+    border: 1px solid #173b56;
+
+    border-radius: 18px;
+
+}
+
+
+.section-title h2 {
+
+    margin: 0;
+
+    font-size: 20px;
+
+}
+
+
+.diagnostic-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 12px;
+
+    margin-top: 22px;
+
+}
+
+
+.diagnostic {
+
+    padding: 18px;
+
+    background: #061726;
+
+    border-radius: 12px;
+
+}
+
+
+.diagnostic span {
+
+    display: block;
+
+    color: #718ca3;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 9px;
+
+}
+
+
+.diagnostic strong {
+
+    color: #13d9ef;
+
+    font-size: 18px;
+
+}
+
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.device-actions {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 25px;
+
+}
+
+
+.back-button,
+.next-button {
+
+    padding: 13px 20px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+}
+
+
+.back-button {
+
+    color: #9bb7c9;
+
+    border: 1px solid #24506a;
+
+}
+
+
+.next-button {
+
+    color: #13d9ef;
+
+    border: 1px solid #0b8296;
+
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .health-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .diagnostic-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .device-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+    }
+
+
+    .health-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .diagnostic-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .device-actions {
+
+        flex-direction: column;
+
+        gap: 10px;
+
+    }
+
+}

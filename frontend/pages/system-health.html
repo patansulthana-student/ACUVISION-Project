@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>ACUVISION | System Health</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css">
+
+    <link
+        rel="stylesheet"
+        href="../css/dashboard.css">
+
+    <link
+        rel="stylesheet"
+        href="../css/system-health.css">
+
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css">
+
+</head>
+
+
+<body>
+
+<main class="system-page">
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="system-header">
+
+        <div>
+
+            <div class="system-label">
+                ACUVISION SYSTEM MONITOR
+            </div>
+
+            <h1>
+                System Health
+            </h1>
+
+            <p>
+                Real-time status of the complete AcuVision processing pipeline.
+            </p>
+
+        </div>
+
+
+        <div
+            class="system-status"
+            id="systemStatus">
+
+            <span class="status-dot"></span>
+
+            CHECKING
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         OVERALL SYSTEM
+    ====================================================== -->
+
+    <section class="system-overview">
+
+        <div class="system-score">
+
+            <div class="score-circle">
+
+                <span id="healthScore">
+                    —
+                </span>
+
+                <small>
+                    %
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="overview-content">
+
+            <div class="system-label">
+                OVERALL SYSTEM HEALTH
+            </div>
+
+            <h2 id="overallSystemStatus">
+                Checking...
+            </h2>
+
+            <p id="overallSystemDescription">
+                Checking the ACUVISION processing pipeline.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CORE ENGINES
+    ====================================================== -->
+
+    <section class="engine-grid">
+
+
+        <!-- =================================================
+             AI DETECTION
+        ================================================== -->
+
+        <div class="engine-card">
+
+            <div class="engine-top">
+
+                <div class="engine-icon">
+                    AI
+                </div>
+
+                <span
+                    id="aiBadge"
+                    class="active-badge">
+
+                    CHECKING
+
+                </span>
+
+            </div>
+
+
+            <h3>
+                AI Detection Engine
+            </h3>
+
+            <p>
+                Object detection and scene understanding.
+            </p>
+
+
+            <div class="engine-value">
+
+                <strong id="aiFPS">
+                    —
+                </strong>
+
+                <span>
+                    STATUS
+                </span>
+
+            </div>
+
+
+            <div class="engine-progress">
+
+                <div
+                    id="aiProgress"
+                    style="width:0%">
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             SPATIAL AUDIO
+        ================================================== -->
+
+        <div class="engine-card">
+
+            <div class="engine-top">
+
+                <div class="engine-icon">
+                    SA
+                </div>
+
+                <span
+                    id="audioBadge"
+                    class="ready-badge">
+
+                    NOT VERIFIED
+
+                </span>
+
+            </div>
+
+
+            <h3>
+                Spatial Audio Engine
+            </h3>
+
+            <p>
+                Converts object position into directional audio.
+            </p>
+
+
+            <div class="engine-value">
+
+                <strong id="audioValue">
+                    —
+                </strong>
+
+                <span>
+                    STATUS
+                </span>
+
+            </div>
+
+
+            <div class="engine-progress">
+
+                <div
+                    id="audioProgress"
+                    style="width:0%">
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             VOICE
+        ================================================== -->
+
+        <div class="engine-card">
+
+            <div class="engine-top">
+
+                <div class="engine-icon">
+                    VO
+                </div>
+
+                <span
+                    id="voiceBadge"
+                    class="ready-badge">
+
+                    NOT VERIFIED
+
+                </span>
+
+            </div>
+
+
+            <h3>
+                Voice Engine
+            </h3>
+
+            <p>
+                Provides spoken hazard notifications.
+            </p>
+
+
+            <div class="engine-value">
+
+                <strong id="voiceValue">
+                    —
+                </strong>
+
+                <span>
+                    STATUS
+                </span>
+
+            </div>
+
+
+            <div class="engine-progress">
+
+                <div
+                    id="voiceProgress"
+                    style="width:0%">
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             CAMERA
+        ================================================== -->
+
+        <div class="engine-card">
+
+            <div class="engine-top">
+
+                <div class="engine-icon">
+                    CAM
+                </div>
+
+                <span
+                    id="cameraBadge"
+                    class="active-badge">
+
+                    CHECKING
+
+                </span>
+
+            </div>
+
+
+            <h3>
+                Camera Pipeline
+            </h3>
+
+            <p>
+                Captures live visual input for AI processing.
+            </p>
+
+
+            <div class="engine-value">
+
+                <strong id="cameraValue">
+                    —
+                </strong>
+
+                <span>
+                    SOURCE
+                </span>
+
+            </div>
+
+
+            <div class="engine-progress">
+
+                <div
+                    id="cameraProgress"
+                    style="width:0%">
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             BACKEND
+        ================================================== -->
+
+        <div class="engine-card">
+
+            <div class="engine-top">
+
+                <div class="engine-icon">
+                    API
+                </div>
+
+                <span
+                    id="backendBadge"
+                    class="connected-badge">
+
+                    CHECKING
+
+                </span>
+
+            </div>
+
+
+            <h3>
+                Flask Backend
+            </h3>
+
+            <p>
+                Handles communication between AI and frontend.
+            </p>
+
+
+            <div class="engine-value">
+
+                <strong id="apiStatus">
+                    CHECKING
+                </strong>
+
+                <span>
+                    API
+                </span>
+
+            </div>
+
+
+            <div class="engine-progress">
+
+                <div
+                    id="backendProgress"
+                    style="width:0%">
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             ALERT ENGINE
+        ================================================== -->
+
+        <div class="engine-card">
+
+            <div class="engine-top">
+
+                <div class="engine-icon">
+                    AL
+                </div>
+
+                <span
+                    id="alertBadge"
+                    class="active-badge">
+
+                    MONITORING
+
+                </span>
+
+            </div>
+
+
+            <h3>
+                Alert Engine
+            </h3>
+
+            <p>
+                Evaluates threat priority and generates warnings.
+            </p>
+
+
+            <div class="engine-value">
+
+                <strong id="alertValue">
+                    READY
+                </strong>
+
+                <span>
+                    STATUS
+                </span>
+
+            </div>
+
+
+            <div class="engine-progress">
+
+                <div
+                    id="alertProgress"
+                    style="width:0%">
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PIPELINE
+    ====================================================== -->
+
+    <section class="pipeline-card">
+
+        <div class="system-label">
+            PROCESSING PIPELINE
+        </div>
+
+        <h2>
+            Real-Time Data Flow
+        </h2>
+
+
+        <div class="pipeline">
+
+
+            <div class="pipeline-node">
+
+                <strong>
+                    CAMERA
+                </strong>
+
+                <span>
+                    Visual Input
+                </span>
+
+            </div>
+
+
+            <div class="pipeline-arrow">
+                →
+            </div>
+
+
+            <div class="pipeline-node">
+
+                <strong>
+                    AI
+                </strong>
+
+                <span>
+                    Detection
+                </span>
+
+            </div>
+
+
+            <div class="pipeline-arrow">
+                →
+            </div>
+
+
+            <div class="pipeline-node">
+
+                <strong>
+                    POSITION
+                </strong>
+
+                <span>
+                    Spatial Analysis
+                </span>
+
+            </div>
+
+
+            <div class="pipeline-arrow">
+                →
+            </div>
+
+
+            <div class="pipeline-node">
+
+                <strong>
+                    THREAT
+                </strong>
+
+                <span>
+                    Priority
+                </span>
+
+            </div>
+
+
+            <div class="pipeline-arrow">
+                →
+            </div>
+
+
+            <div class="pipeline-node">
+
+                <strong>
+                    AUDIO
+                </strong>
+
+                <span>
+                    User Feedback
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ACTIONS
+    ====================================================== -->
+
+    <div class="system-actions">
+
+
+        <a
+            href="../dashboard.html"
+            class="back-button">
+
+            ← BACK TO DASHBOARD
+
+        </a>
+
+
+        <a
+            href="settings.html"
+            class="next-button">
+
+            SYSTEM SETTINGS →
+
+        </a>
+
+
+    </div>
+
+
+</main>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script src="../js/api.js"></script>
+
+<script src="../js/system-health.js?v=2"></script>
+
+
+</body>
+
+</html>

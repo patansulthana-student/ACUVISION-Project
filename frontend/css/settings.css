@@ -1,0 +1,409 @@
+
+/* =========================================
+   ACUVISION — SETTINGS
+========================================= */
+
+.settings-page {
+
+    width: min(1100px, 94%);
+
+    margin: auto;
+
+    padding: 35px 0 60px;
+
+}
+
+
+.settings-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 28px;
+
+}
+
+
+.settings-label {
+
+    color: #13d9ef;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.settings-header h1 {
+
+    margin: 0;
+
+    font-size: 34px;
+
+}
+
+
+.settings-header p {
+
+    color: #718ca3;
+
+    font-size: 13px;
+
+}
+
+
+.settings-status {
+
+    padding: 10px 14px;
+
+    border: 1px solid #17445c;
+
+    border-radius: 9px;
+
+    color: #00e6a8;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+}
+
+
+/* SECTION */
+
+.settings-section {
+
+    margin-bottom: 20px;
+
+    padding: 24px;
+
+    background: #08192b;
+
+    border: 1px solid #173b56;
+
+    border-radius: 17px;
+
+}
+
+
+.section-heading {
+
+    margin-bottom: 10px;
+
+}
+
+
+.section-heading span {
+
+    color: #13d9ef;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.4px;
+
+}
+
+
+.section-heading h2 {
+
+    margin: 5px 0 18px;
+
+    font-size: 19px;
+
+}
+
+
+/* SETTING */
+
+.setting-item {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 17px 0;
+
+    border-top: 1px solid #122f44;
+
+}
+
+
+.setting-item strong {
+
+    font-size: 13px;
+
+}
+
+
+.setting-item p {
+
+    margin: 5px 0 0;
+
+    color: #718ca3;
+
+    font-size: 10px;
+
+}
+
+
+/* RANGE */
+
+.range-control {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+.range-control input {
+
+    width: 150px;
+
+    accent-color: #13d9ef;
+
+}
+
+
+.range-control span {
+
+    min-width: 35px;
+
+    color: #13d9ef;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+}
+
+
+/* SELECT */
+
+select {
+
+    min-width: 130px;
+
+    padding: 9px 12px;
+
+    color: #dcebf5;
+
+    background: #061726;
+
+    border: 1px solid #24506a;
+
+    border-radius: 8px;
+
+    outline: none;
+
+}
+
+
+/* SWITCH */
+
+.switch {
+
+    position: relative;
+
+    width: 46px;
+
+    height: 24px;
+
+}
+
+
+.switch input {
+
+    display: none;
+
+}
+
+
+.slider {
+
+    position: absolute;
+
+    inset: 0;
+
+    cursor: pointer;
+
+    background: #193348;
+
+    border-radius: 20px;
+
+    transition: .25s;
+
+}
+
+
+.slider::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 18px;
+
+    height: 18px;
+
+    left: 3px;
+
+    top: 3px;
+
+    background: #8ba5b7;
+
+    border-radius: 50%;
+
+    transition: .25s;
+
+}
+
+
+.switch input:checked + .slider {
+
+    background: #07586a;
+
+}
+
+
+.switch input:checked + .slider::before {
+
+    transform: translateX(22px);
+
+    background: #13d9ef;
+
+}
+
+
+/* ACTIONS */
+
+.settings-actions {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 12px;
+
+    margin-top: 25px;
+
+}
+
+
+.reset-button,
+.save-button {
+
+    padding: 12px 22px;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+}
+
+
+.reset-button {
+
+    color: #9bb7c9;
+
+    background: transparent;
+
+    border: 1px solid #24506a;
+
+}
+
+
+.save-button {
+
+    color: #061726;
+
+    background: #13d9ef;
+
+    border: 1px solid #13d9ef;
+
+}
+
+
+/* NAVIGATION */
+
+.navigation-buttons {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 25px;
+
+}
+
+
+.navigation-buttons a {
+
+    color: #13d9ef;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px) {
+
+    .settings-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+    }
+
+    .setting-item {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+    }
+
+    .settings-actions {
+
+        justify-content: stretch;
+
+    }
+
+    .reset-button,
+    .save-button {
+
+        flex: 1;
+
+    }
+
+}

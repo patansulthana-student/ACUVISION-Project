@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>ACUVISION | Smart Navigation Dashboard</title>
+
+
+    <link
+        rel="stylesheet"
+        href="css/style.css">
+
+    <link
+        rel="stylesheet"
+        href="css/dashboard.css">
+
+    <link
+        rel="stylesheet"
+        href="css/responsive.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     ACUVISION SIDEBAR
+====================================================== -->
+
+<aside class="acuvision-sidebar">
+
+    <div class="sidebar-brand">
+
+        <div class="sidebar-logo">
+            A
+        </div>
+
+        <div>
+
+            <strong>
+                ACUVISION
+            </strong>
+
+            <span>
+                SPATIAL NAVIGATION
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <nav class="sidebar-nav">
+
+
+        <a
+            href="dashboard.html"
+            class="nav-item active">
+
+            <span class="nav-icon">
+                ⌂
+            </span>
+
+            <span>
+                Live Demo
+            </span>
+
+        </a>
+
+
+        <a
+            href="pages/perception.html"
+            class="nav-item">
+
+            <span class="nav-icon">
+                ◉
+            </span>
+
+            <span>
+                Perception
+            </span>
+
+        </a>
+
+
+        <a
+            href="pages/spatial-audio.html"
+            class="nav-item">
+
+            <span class="nav-icon">
+                ◀●▶
+            </span>
+
+            <span>
+                Spatial Audio
+            </span>
+
+        </a>
+
+
+        <a
+            href="pages/accessibility.html"
+            class="nav-item">
+
+            <span class="nav-icon">
+                ♫
+            </span>
+
+            <span>
+                Accessibility
+            </span>
+
+        </a>
+
+
+        <a
+            href="pages/caregiver.html"
+            class="nav-item">
+
+            <span class="nav-icon">
+                ◈
+            </span>
+
+            <span>
+                Caregiver
+            </span>
+
+        </a>
+
+
+        <div class="nav-divider"></div>
+
+
+        <a
+            href="pages/alerts.html"
+            class="nav-item">
+
+            <span class="nav-icon">
+                !
+            </span>
+
+            <span>
+                Alerts
+            </span>
+
+        </a>
+
+
+        <a
+            href="pages/events.html"
+            class="nav-item">
+
+            <span class="nav-icon">
+                ☷
+            </span>
+
+            <span>
+                Events
+            </span>
+
+        </a>
+
+
+        <a
+            href="pages/device-health.html"
+            class="nav-item">
+
+            <span class="nav-icon">
+                ▣
+            </span>
+
+            <span>
+                Device Health
+            </span>
+
+        </a>
+
+
+        <a
+            href="pages/system-health.html"
+            class="nav-item">
+
+            <span class="nav-icon">
+                ◌
+            </span>
+
+            <span>
+                System Health
+            </span>
+
+        </a>
+
+
+        <a
+            href="pages/settings.html"
+            class="nav-item">
+
+            <span class="nav-icon">
+                ⚙
+            </span>
+
+            <span>
+                Settings
+            </span>
+
+        </a>
+
+    </nav>
+
+
+    <div class="sidebar-footer">
+
+        <div
+            class="sidebar-online"
+            id="sidebarSystemStatus">
+
+            <span class="sidebar-status-dot"></span>
+
+            SYSTEM CHECKING
+
+        </div>
+
+
+        <a
+            href="login.html"
+            class="logout-link">
+
+            ← Logout
+
+        </a>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =====================================================
+     TOP HEADER
+====================================================== -->
+
+<header class="topbar">
+
+
+    <div class="brand">
+
+        <div class="brand-icon">
+            A
+        </div>
+
+
+        <div>
+
+            <h1>
+                ACUVISION
+            </h1>
+
+            <p>
+                Assistive Spatial Navigation
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <section class="system-status-bar">
+
+
+        <!-- AI -->
+
+        <div class="status-item">
+
+            <span
+                class="status-dot"
+                id="aiStatusDot">
+            </span>
+
+            <div>
+
+                <span class="status-label">
+                    AI ENGINE
+                </span>
+
+                <span
+                    class="status-value"
+                    id="aiStatusValue">
+
+                    CHECKING
+
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CAMERA -->
+
+        <div class="status-item">
+
+            <span
+                class="status-dot"
+                id="cameraStatusDot">
+            </span>
+
+            <div>
+
+                <span class="status-label">
+                    CAMERA
+                </span>
+
+                <span
+                    class="status-value"
+                    id="cameraStatusValue">
+
+                    CHECKING
+
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- SPATIAL AUDIO -->
+
+        <div class="status-item">
+
+            <span
+                class="status-dot"
+                id="spatialStatusDot">
+            </span>
+
+            <div>
+
+                <span class="status-label">
+                    SPATIAL AUDIO
+                </span>
+
+                <span
+                    class="status-value"
+                    id="spatialStatusValue">
+
+                    CHECKING
+
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- SYSTEM -->
+
+        <div class="status-item expo-status">
+
+            <span
+                class="status-dot"
+                id="backendStatusDot">
+            </span>
+
+            <div>
+
+                <span class="status-label">
+                    SYSTEM MODE
+                </span>
+
+                <span
+                    class="status-value"
+                    id="systemModeValue">
+
+                    CHECKING
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN DASHBOARD
+====================================================== -->
+
+<main class="dashboard-container">
+
+
+    <!-- PAGE TITLE -->
+
+    <section class="page-heading">
+
+
+        <div>
+
+            <p class="eyebrow">
+                REAL-TIME EDGE AI
+            </p>
+
+
+            <h2>
+
+                Spatial Awareness
+                <span>
+                    Dashboard
+                </span>
+
+            </h2>
+
+
+            <p class="heading-description">
+
+                Real-time perception, proximity estimation and
+                spatial audio guidance for visually impaired users.
+
+            </p>
+
+        </div>
+
+
+        <div
+            class="live-indicator"
+            id="dashboardLiveIndicator">
+
+            <span></span>
+
+            LIVE
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         MAIN GRID
+    ====================================================== -->
+
+    <section class="dashboard-grid">
+
+
+        <!-- =================================================
+             LIVE CAMERA
+        ================================================== -->
+
+        <section class="camera-card">
+
+
+            <div class="camera-header">
+
+                <div>
+
+                    <span class="section-label">
+                        PERCEPTION
+                    </span>
+
+                    <h2>
+                        Live Camera Feed
+                    </h2>
+
+                </div>
+
+
+                <div
+                    class="camera-mode"
+                    id="cameraModeBadge">
+
+                    <span class="camera-dot"></span>
+
+                    CHECKING
+
+                </div>
+
+            </div>
+
+
+            <div class="camera-screen">
+
+
+                <img
+                    id="liveCameraFeed"
+                    class="live-camera-feed"
+                    alt="ACUVISION live camera feed">
+
+
+                <div
+                    class="camera-grid">
+                </div>
+
+
+                <!-- Only shown when stream unavailable -->
+
+                <div
+                    class="camera-message"
+                    id="cameraMessage">
+
+                    <div class="camera-icon">
+                        ◉
+                    </div>
+
+
+                    <h3>
+                        Camera Feed Unavailable
+                    </h3>
+
+
+                    <p>
+                        Waiting for the ACUVISION backend camera stream.
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="camera-live"
+                    id="cameraLiveStatus">
+
+                    <span></span>
+
+                    CHECKING CAMERA
+
+                </div>
+
+            </div>
+
+
+            <div class="camera-footer">
+
+
+                <span>
+
+                    MODE:
+
+                    <strong id="cameraMode">
+                        —
+                    </strong>
+
+                </span>
+
+
+                <span>
+
+                    FPS:
+
+                    <strong id="fps-value">
+                        —
+                    </strong>
+
+                </span>
+
+
+                <span>
+
+                    AI:
+
+                    <strong id="aiModel">
+                        YOLO-WORLD
+                    </strong>
+
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             PRIMARY HAZARD
+        ================================================== -->
+
+        <section class="hazard-card">
+
+
+            <div class="hazard-header">
+
+                <span class="section-label">
+                    PRIMARY HAZARD
+                </span>
+
+
+                <span
+                    class="hazard-level"
+                    id="hazard-level">
+
+                    —
+
+                </span>
+
+            </div>
+
+
+            <div class="hazard-icon">
+                !
+            </div>
+
+
+            <h2 id="hazard-object">
+                Waiting for live detection...
+            </h2>
+
+
+            <p id="hazard-description">
+
+                No live hazard information available yet.
+
+            </p>
+
+
+            <div class="hazard-metrics">
+
+
+                <div class="metric">
+
+                    <span>
+                        CONFIDENCE
+                    </span>
+
+                    <strong
+                        id="hazard-confidence">
+
+                        —
+
+                    </strong>
+
+                </div>
+
+
+                <div class="metric">
+
+                    <span>
+                        DIRECTION
+                    </span>
+
+                    <strong
+                        id="hazard-direction">
+
+                        —
+
+                    </strong>
+
+                </div>
+
+
+                <div class="metric">
+
+                    <span>
+                        PROXIMITY
+                    </span>
+
+                    <strong
+                        id="hazard-proximity">
+
+                        —
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="threat-score">
+
+
+                <div class="score-header">
+
+                    <span>
+                        THREAT PRIORITY
+                    </span>
+
+                    <strong
+                        id="threat-score">
+
+                        — / 100
+
+                    </strong>
+
+                </div>
+
+
+                <div class="score-bar">
+
+                    <div
+                        id="score-fill"
+                        style="width:0%">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SPATIAL AUDIO
+        ================================================== -->
+
+        <div class="card audio-card">
+
+
+            <div class="card-header">
+
+                <div>
+
+                    <p class="card-label">
+                        AUDIO GUIDANCE
+                    </p>
+
+                    <h3>
+                        Spatial Audio
+                    </h3>
+
+                </div>
+
+
+                <span
+                    class="audio-status"
+                    id="audioStatus">
+
+                    CHECKING
+
+                </span>
+
+            </div>
+
+
+
+            <div class="audio-direction">
+
+                <span>
+                    LEFT
+                </span>
+
+
+                <div class="audio-track">
+
+                    <div
+                        class="audio-center">
+                    </div>
+
+
+                    <div
+                        class="audio-position"
+                        id="audioPosition">
+
+                    </div>
+
+                </div>
+
+
+                <span>
+                    RIGHT
+                </span>
+
+            </div>
+
+
+
+            <div class="ear-levels">
+
+
+                <div class="ear">
+
+                    <span>
+                        LEFT EAR
+                    </span>
+
+
+                    <div class="volume-bar">
+
+                        <div
+                            id="leftVolume"
+                            class="volume-fill"
+                            style="width:0%">
+                        </div>
+
+                    </div>
+
+
+                    <strong
+                        id="leftValue">
+
+                        —
+
+                    </strong>
+
+                </div>
+
+
+
+                <div class="ear">
+
+                    <span>
+                        RIGHT EAR
+                    </span>
+
+
+                    <div class="volume-bar">
+
+                        <div
+                            id="rightVolume"
+                            class="volume-fill"
+                            style="width:0%">
+                        </div>
+
+                    </div>
+
+
+                    <strong
+                        id="rightValue">
+
+                        —
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             PROXIMITY
+        ================================================== -->
+
+        <div class="card proximity-card">
+
+
+            <p class="card-label">
+                PROXIMITY ESTIMATION
+            </p>
+
+
+            <div class="proximity-value">
+
+                <span id="distanceLevel">
+                    —
+                </span>
+
+            </div>
+
+
+            <div class="distance-meter">
+
+                <div class="meter-track">
+
+                    <div
+                        id="distanceMeter"
+                        class="meter-fill"
+                        style="width:0%">
+                    </div>
+
+                </div>
+
+
+                <div class="meter-labels">
+
+                    <span>
+                        FAR
+                    </span>
+
+                    <span>
+                        CLOSE
+                    </span>
+
+                    <span>
+                        VERY CLOSE
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <p class="small-info">
+
+                Estimated from object bounding-box size.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             THREAT PRIORITY
+        ================================================== -->
+
+        <div class="card priority-card">
+
+
+            <p class="card-label">
+                THREAT PRIORITY
+            </p>
+
+
+            <div class="priority-score">
+
+                <strong id="priorityScore">
+                    0
+                </strong>
+
+                <span>
+                    / 100
+                </span>
+
+            </div>
+
+
+            <div class="priority-bar">
+
+                <div
+                    id="priorityBar"
+                    class="priority-fill"
+                    style="width:0%">
+                </div>
+
+            </div>
+
+
+            <p id="priorityText">
+                Waiting for live environment data.
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             SYSTEM STATUS
+        ================================================== -->
+
+        <div class="card system-card">
+
+
+            <p class="card-label">
+                SYSTEM STATUS
+            </p>
+
+
+            <div class="system-row">
+
+                <span>
+                    AI Detection
+                </span>
+
+                <strong
+                    class="green"
+                    id="dashboardAIStatus">
+
+                    ● CHECKING
+
+                </strong>
+
+            </div>
+
+
+            <div class="system-row">
+
+                <span>
+                    Spatial Engine
+                </span>
+
+                <strong
+                    class="green"
+                    id="dashboardSpatialStatus">
+
+                    ● CHECKING
+
+                </strong>
+
+            </div>
+
+
+            <div class="system-row">
+
+                <span>
+                    Voice Engine
+                </span>
+
+                <strong
+                    class="green"
+                    id="dashboardVoiceStatus">
+
+                    ● CHECKING
+
+                </strong>
+
+            </div>
+
+
+            <div class="system-row">
+
+                <span>
+                    Backend
+                </span>
+
+                <strong
+                    class="yellow"
+                    id="dashboardBackendStatus">
+
+                    ● CHECKING
+
+                </strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         OBJECT LIST
+    ====================================================== -->
+
+    <section
+        class="card objects-card"
+        id="objectPerception">
+
+
+        <div class="card-header">
+
+            <div>
+
+                <p class="card-label">
+                    OBJECT PERCEPTION
+                </p>
+
+                <h3>
+                    Detected Environment
+                </h3>
+
+            </div>
+
+
+            <span
+                class="object-count"
+                id="objectCount">
+
+                0 OBJECTS
+
+            </span>
+
+        </div>
+
+
+        <div class="objects-table">
+
+
+            <div class="object-row table-heading">
+
+                <span>
+                    OBJECT
+                </span>
+
+                <span>
+                    CONFIDENCE
+                </span>
+
+                <span>
+                    DIRECTION
+                </span>
+
+                <span>
+                    PROXIMITY
+                </span>
+
+                <span>
+                    PRIORITY
+                </span>
+
+            </div>
+
+
+            <div
+                id="dashboardObjectRows">
+
+                <div class="object-row">
+
+                    <span>
+                        Waiting for live detections...
+                    </span>
+
+                    <span>—</span>
+                    <span>—</span>
+                    <span>—</span>
+                    <span>—</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="dashboard-footer">
+
+        <span>
+            ACUVISION EDGE-AI
+        </span>
+
+        <span>
+            Spatial Audio Navigation System
+        </span>
+
+        <span id="dashboardMode">
+            Live Webcam
+        </span>
+
+    </footer>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script src="js/dashboard.js?v=5"></script>
+
+
+</body>
+
+</html>

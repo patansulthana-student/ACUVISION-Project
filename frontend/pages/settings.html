@@ -1,0 +1,424 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ACUVISION | System Settings</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/settings.css">
+
+</head>
+
+<body>
+
+<main class="settings-page">
+
+    <!-- HEADER -->
+
+    <header class="settings-header">
+
+        <div>
+
+            <div class="settings-label">
+                ACUVISION CONFIGURATION
+            </div>
+
+            <h1>
+                System Settings
+            </h1>
+
+            <p>
+                Configure general application and system behaviour.
+            </p>
+
+        </div>
+
+        <div class="settings-status">
+            ● SETTINGS ACTIVE
+        </div>
+
+    </header>
+
+
+    <!-- APPLICATION -->
+
+    <section class="settings-section">
+
+        <div class="section-heading">
+
+            <span>APPLICATION</span>
+
+            <h2>
+                Application Settings
+            </h2>
+
+        </div>
+
+
+        <div class="setting-item">
+
+            <div>
+                <strong>Demo Mode</strong>
+                <p>
+                    Use simulated data for demonstrations.
+                </p>
+            </div>
+
+            <label class="switch">
+
+                <input
+                    type="checkbox"
+                    id="demoMode"
+                    checked>
+
+                <span class="slider"></span>
+
+            </label>
+
+        </div>
+
+
+        <div class="setting-item">
+
+            <div>
+                <strong>Auto Start</strong>
+                <p>
+                    Start the ACUVISION dashboard automatically.
+                </p>
+            </div>
+
+            <label class="switch">
+
+                <input
+                    type="checkbox"
+                    id="autoStart"
+                    checked>
+
+                <span class="slider"></span>
+
+            </label>
+
+        </div>
+
+
+        <div class="setting-item">
+
+            <div>
+                <strong>Data Logging</strong>
+                <p>
+                    Store system events for later review.
+                </p>
+            </div>
+
+            <label class="switch">
+
+                <input
+                    type="checkbox"
+                    id="dataLogging"
+                    checked>
+
+                <span class="slider"></span>
+
+            </label>
+
+        </div>
+
+    </section>
+
+
+    <!-- INTERFACE -->
+
+    <section class="settings-section">
+
+        <div class="section-heading">
+
+            <span>INTERFACE</span>
+
+            <h2>
+                Display Settings
+            </h2>
+
+        </div>
+
+
+        <div class="setting-item">
+
+            <div>
+                <strong>High Contrast Mode</strong>
+                <p>
+                    Increase visual contrast throughout the interface.
+                </p>
+            </div>
+
+            <label class="switch">
+
+                <input
+                    type="checkbox"
+                    id="highContrast">
+
+                <span class="slider"></span>
+
+            </label>
+
+        </div>
+
+
+        <div class="setting-item">
+
+            <div>
+                <strong>Large Text</strong>
+                <p>
+                    Increase text size across the interface.
+                </p>
+            </div>
+
+            <label class="switch">
+
+                <input
+                    type="checkbox"
+                    id="largeText">
+
+                <span class="slider"></span>
+
+            </label>
+
+        </div>
+
+
+        <div class="setting-item">
+
+            <div>
+                <strong>Animations</strong>
+                <p>
+                    Enable dashboard and interface animations.
+                </p>
+            </div>
+
+            <label class="switch">
+
+                <input
+                    type="checkbox"
+                    id="animations"
+                    checked>
+
+                <span class="slider"></span>
+
+            </label>
+
+        </div>
+
+    </section>
+
+
+    <!-- SYSTEM -->
+
+    <section class="settings-section">
+
+        <div class="section-heading">
+
+            <span>SYSTEM</span>
+
+            <h2>
+                System Behaviour
+            </h2>
+
+        </div>
+
+
+        <div class="setting-item">
+
+            <div>
+                <strong>Auto Reconnect</strong>
+                <p>
+                    Automatically reconnect disconnected components.
+                </p>
+            </div>
+
+            <label class="switch">
+
+                <input
+                    type="checkbox"
+                    id="autoReconnect"
+                    checked>
+
+                <span class="slider"></span>
+
+            </label>
+
+        </div>
+
+
+        <div class="setting-item">
+
+            <div>
+                <strong>Save Session Data</strong>
+                <p>
+                    Preserve the current session configuration.
+                </p>
+            </div>
+
+            <label class="switch">
+
+                <input
+                    type="checkbox"
+                    id="saveSession"
+                    checked>
+
+                <span class="slider"></span>
+
+            </label>
+
+        </div>
+
+
+        <div class="setting-item">
+
+            <div>
+                <strong>Language</strong>
+                <p>
+                    Interface language.
+                </p>
+            </div>
+
+            <select id="language">
+
+                <option selected>
+                    English
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="setting-item">
+
+            <div>
+                <strong>Distance Unit</strong>
+                <p>
+                    Unit used for proximity measurements.
+                </p>
+            </div>
+
+            <select id="distanceUnit">
+
+                <option selected>
+                    Meters
+                </option>
+
+                <option>
+                    Feet
+                </option>
+
+            </select>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="settings-section">
+
+        <div class="section-heading">
+
+            <span>ABOUT ACUVISION</span>
+
+            <h2>
+                System Information
+            </h2>
+
+        </div>
+
+
+        <div class="setting-item">
+
+            <div>
+                <strong>Version</strong>
+                <p>Application version</p>
+            </div>
+
+            <strong>
+                1.0.0
+            </strong>
+
+        </div>
+
+
+        <div class="setting-item">
+
+            <div>
+                <strong>AI Model</strong>
+                <p>Object detection engine</p>
+            </div>
+
+            <strong>
+                YOLO-World
+            </strong>
+
+        </div>
+
+
+        <div class="setting-item">
+
+            <div>
+                <strong>Operating Mode</strong>
+                <p>Current system mode</p>
+            </div>
+
+            <strong>
+                Edge-AI Demo
+            </strong>
+
+        </div>
+
+    </section>
+
+
+    <!-- ACTIONS -->
+
+    <div class="settings-actions">
+
+        <button
+            id="resetSettings"
+            class="reset-button">
+
+            RESET
+
+        </button>
+
+
+        <button
+            id="saveSettings"
+            class="save-button">
+
+            SAVE SETTINGS
+
+        </button>
+
+    </div>
+
+
+    <div class="navigation-buttons">
+
+        <a href="../dashboard.html">
+            ← BACK TO DASHBOARD
+        </a>
+
+    </div>
+
+</main>
+
+
+<script src="../js/settings.js?v=3"></script>
+
+</body>
+
+</html>

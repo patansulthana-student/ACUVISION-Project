@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>ACUVISION | Event History</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css">
+
+    <link
+        rel="stylesheet"
+        href="../css/dashboard.css">
+
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css">
+
+    <link
+        rel="stylesheet"
+        href="../css/events.css">
+
+</head>
+
+
+<body>
+
+<main class="page-container events-page">
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="page-header">
+
+        <div>
+
+            <span class="section-label">
+                EVENT LOG
+            </span>
+
+            <h1>
+                Event History
+            </h1>
+
+            <p class="subtitle">
+                Recorded object detections and safety events.
+            </p>
+
+        </div>
+
+
+        <div class="status-badge">
+
+            <span class="status-dot"></span>
+
+            LOGGING ACTIVE
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         SUMMARY
+    ====================================================== -->
+
+    <section class="audio-object-info">
+
+
+        <div class="info-box">
+
+            <span>
+                TOTAL EVENTS
+            </span>
+
+            <strong id="totalEvents">
+                0
+            </strong>
+
+        </div>
+
+
+
+        <div class="info-box">
+
+            <span>
+                CRITICAL
+            </span>
+
+            <strong id="criticalEvents">
+                0
+            </strong>
+
+        </div>
+
+
+
+        <div class="info-box">
+
+            <span>
+                LAST EVENT
+            </span>
+
+            <strong id="lastEvent">
+                —
+            </strong>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         EVENT TABLE
+    ====================================================== -->
+
+    <section class="card">
+
+
+        <div class="card-header">
+
+            <div>
+
+                <span class="section-label">
+                    DETECTION HISTORY
+                </span>
+
+                <h2>
+                    Recent Events
+                </h2>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="threat-table">
+
+
+            <!-- TABLE HEADER -->
+
+            <div class="threat-table-header">
+
+                <span>
+                    TIME
+                </span>
+
+                <span>
+                    OBJECT
+                </span>
+
+                <span>
+                    DIRECTION
+                </span>
+
+                <span>
+                    PROXIMITY
+                </span>
+
+                <span>
+                    SCORE
+                </span>
+
+            </div>
+
+
+            <!-- REAL EVENTS INSERTED HERE -->
+
+            <div id="eventRows">
+
+                <div class="threat-row">
+
+                    <span>
+                        Waiting for events...
+                    </span>
+
+                    <span>
+                        —
+                    </span>
+
+                    <span>
+                        —
+                    </span>
+
+                    <span>
+                        —
+                    </span>
+
+                    <strong>
+                        —
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ACTIONS
+    ====================================================== -->
+
+    <div class="page-actions">
+
+
+        <a
+            href="alerts.html"
+            class="action-button">
+
+            ← ALERTS
+
+        </a>
+
+
+        <a
+            href="../dashboard.html"
+            class="action-button">
+
+            DASHBOARD
+
+        </a>
+
+
+    </div>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script src="../js/events.js?v=2"></script>
+
+</body>
+
+</html>

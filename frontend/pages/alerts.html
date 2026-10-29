@@ -1,0 +1,568 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>ACUVISION | Alert Monitor</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css">
+
+    <link
+        rel="stylesheet"
+        href="../css/dashboard.css">
+
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css">
+
+    <link
+        rel="stylesheet"
+        href="../css/alerts.css">
+
+</head>
+
+
+<body>
+
+<main class="page-container alerts-page">
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="page-header">
+
+        <div>
+
+            <span class="section-label">
+                SAFETY EVENT BRIDGE
+            </span>
+
+            <h1>
+                Alert Monitor
+            </h1>
+
+            <p class="subtitle">
+                Tracks how detected hazards become alerts and recorded safety events.
+            </p>
+
+        </div>
+
+
+        <div class="status-badge">
+
+            <span class="status-dot"></span>
+
+            ALERT ENGINE MONITORING
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         ALERT TO EVENT PIPELINE
+    ====================================================== -->
+
+    <section class="card pipeline-card">
+
+        <div class="card-header">
+
+            <div>
+
+                <span class="section-label">
+                    LIVE EVENT FLOW
+                </span>
+
+                <h2>
+                    Alert-to-Event Pipeline
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="pipeline">
+
+
+            <div class="pipeline-step active">
+
+                <div class="pipeline-icon">
+                    AI
+                </div>
+
+                <strong>
+                    DETECTION
+                </strong>
+
+                <span>
+                    Hazard detected
+                </span>
+
+            </div>
+
+
+            <div class="pipeline-arrow">
+                →
+            </div>
+
+
+            <div class="pipeline-step active">
+
+                <div class="pipeline-icon">
+                    !
+                </div>
+
+                <strong>
+                    ALERT
+                </strong>
+
+                <span>
+                    Warning triggered
+                </span>
+
+            </div>
+
+
+            <div class="pipeline-arrow">
+                →
+            </div>
+
+
+            <div class="pipeline-step active">
+
+                <div class="pipeline-icon">
+                    LOG
+                </div>
+
+                <strong>
+                    EVENT
+                </strong>
+
+                <span>
+                    Record created
+                </span>
+
+            </div>
+
+
+            <div class="pipeline-arrow">
+                →
+            </div>
+
+
+            <div class="pipeline-step">
+
+                <div class="pipeline-icon">
+                    H
+                </div>
+
+                <strong>
+                    HISTORY
+                </strong>
+
+                <span>
+                    Event stored
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         LATEST ALERT
+    ====================================================== -->
+
+    <section class="card alert-handoff-card">
+
+        <div class="card-header">
+
+            <div>
+
+                <span class="section-label">
+                    LATEST ALERT
+                </span>
+
+                <h2>
+                    Alert Generated
+                </h2>
+
+            </div>
+
+
+            <span class="alert-state">
+                MONITORING
+            </span>
+
+        </div>
+
+
+
+        <div class="alert-handoff">
+
+
+            <div class="alert-summary">
+
+                <div class="alert-symbol">
+                    !
+                </div>
+
+
+                <div>
+
+                    <strong id="alertTitle">
+                        Waiting for live alert...
+                    </strong>
+
+                    <span id="alertReason">
+                        Waiting for the backend to generate a safety alert.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="alert-data-grid">
+
+
+                <div class="data-item">
+
+                    <span>
+                        TIME
+                    </span>
+
+                    <strong id="alertTime">
+                        —
+                    </strong>
+
+                </div>
+
+
+
+                <div class="data-item">
+
+                    <span>
+                        DIRECTION
+                    </span>
+
+                    <strong id="alertDirection">
+                        —
+                    </strong>
+
+                </div>
+
+
+
+                <div class="data-item">
+
+                    <span>
+                        PROXIMITY
+                    </span>
+
+                    <strong id="alertProximity">
+                        —
+                    </strong>
+
+                </div>
+
+
+
+                <div class="data-item">
+
+                    <span>
+                        THREAT SCORE
+                    </span>
+
+                    <strong id="alertScore">
+                        — / 100
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         LINKED EVENT
+    ====================================================== -->
+
+    <section class="card linked-event-card">
+
+        <div class="card-header">
+
+            <div>
+
+                <span class="section-label">
+                    EVENT LINK
+                </span>
+
+                <h2>
+                    Recorded Safety Event
+                </h2>
+
+            </div>
+
+
+            <span class="recorded-badge">
+                ● NO EVENT
+            </span>
+
+        </div>
+
+
+
+        <div class="linked-event">
+
+
+            <div class="event-id">
+
+                <span>
+                    EVENT ID
+                </span>
+
+                <strong id="eventId">
+                    —
+                </strong>
+
+            </div>
+
+
+
+            <div class="event-info">
+
+
+                <div>
+
+                    <span>
+                        SOURCE
+                    </span>
+
+                    <strong>
+                        Alert Engine
+                    </strong>
+
+                </div>
+
+
+
+                <div>
+
+                    <span>
+                        STATUS
+                    </span>
+
+                    <strong class="status-good">
+                        WAITING
+                    </strong>
+
+                </div>
+
+
+
+                <div>
+
+                    <span>
+                        DESTINATION
+                    </span>
+
+                    <strong>
+                        Event History
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <div class="event-action">
+
+            <p>
+                A recorded event will appear here when a safety alert is generated.
+                Open Event History to view the complete record.
+            </p>
+
+
+            <a
+                href="events.html"
+                class="event-button">
+
+                VIEW EVENT HISTORY →
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SYSTEM CONNECTION
+    ====================================================== -->
+
+    <section class="card connection-card">
+
+        <div class="card-header">
+
+            <div>
+
+                <span class="section-label">
+                    EVENT CONNECTION
+                </span>
+
+                <h2>
+                    Recording Status
+                </h2>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="connection-status">
+
+
+            <div class="connection-item">
+
+                <span class="connection-dot"></span>
+
+                <div>
+
+                    <strong>
+                        Alert Generated
+                    </strong>
+
+                    <span>
+                        Safety warning created successfully
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="connection-line"></div>
+
+
+
+            <div class="connection-item">
+
+                <span class="connection-dot"></span>
+
+                <div>
+
+                    <strong>
+                        Event Recorded
+                    </strong>
+
+                    <span>
+                        Alert data forwarded to event history
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="connection-line"></div>
+
+
+
+            <div class="connection-item">
+
+                <span class="connection-dot"></span>
+
+                <div>
+
+                    <strong>
+                        History Available
+                    </strong>
+
+                    <span>
+                        Recorded event can be reviewed
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ACTIONS
+    ====================================================== -->
+
+    <div class="page-actions alerts-actions">
+
+
+        <a
+            href="../dashboard.html"
+            class="action-button">
+
+            ← BACK TO DASHBOARD
+
+        </a>
+
+
+
+        <a
+            href="events.html"
+            class="event-button">
+
+            OPEN EVENT HISTORY →
+
+        </a>
+
+
+    </div>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script src="../js/alerts.js?v=2"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,487 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ACUVISION | Accessibility Controls</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/accessibility.css">
+
+</head>
+
+<body>
+
+<main class="page-container accessibility-page">
+
+    <!-- HEADER -->
+
+    <header class="page-header">
+
+        <div>
+
+            <span class="section-label">
+                CAREGIVER CONTROL
+            </span>
+
+            <h1>
+                Accessibility
+            </h1>
+
+            <p class="subtitle">
+                Adjust audio and alert behaviour for the user.
+            </p>
+
+        </div>
+
+        <div class="status-badge">
+
+            <span class="status-dot"></span>
+
+            CONTROL ACTIVE
+
+        </div>
+
+    </header>
+
+
+    <!-- AUDIO CONTROL -->
+
+    <section class="card">
+
+        <div class="card-header">
+
+            <div>
+
+                <span class="section-label">
+                    AUDIO CONTROL
+                </span>
+
+                <h2>
+                    User Audio Settings
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <!-- MASTER VOLUME -->
+
+        <div class="control-row">
+
+            <div class="control-info">
+
+                <strong>
+                    Master Volume
+                </strong>
+
+                <span>
+                    Overall headphone volume
+                </span>
+
+            </div>
+
+            <div class="slider-container">
+
+                <input
+                    type="range"
+                    id="masterVolume"
+                    min="0"
+                    max="100"
+                    value="70">
+
+                <strong id="masterVolumeValue">
+                    70%
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- SPATIAL AUDIO INTENSITY -->
+
+        <div class="control-row">
+
+            <div class="control-info">
+
+                <strong>
+                    Spatial Audio Intensity
+                </strong>
+
+                <span>
+                    Strength of directional audio
+                </span>
+
+            </div>
+
+            <div class="slider-container">
+
+                <input
+                    type="range"
+                    id="spatialIntensity"
+                    min="0"
+                    max="100"
+                    value="80">
+
+                <strong id="spatialIntensityValue">
+                    80%
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- VOICE VOLUME -->
+
+        <div class="control-row">
+
+            <div class="control-info">
+
+                <strong>
+                    Voice Volume
+                </strong>
+
+                <span>
+                    Volume of spoken alerts
+                </span>
+
+            </div>
+
+            <div class="slider-container">
+
+                <input
+                    type="range"
+                    id="voiceVolume"
+                    min="0"
+                    max="100"
+                    value="65">
+
+                <strong id="voiceVolumeValue">
+                    65%
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- VOICE SPEED -->
+
+        <div class="control-row">
+
+            <div class="control-info">
+
+                <strong>
+                    Voice Speed
+                </strong>
+
+                <span>
+                    Speed of spoken notifications
+                </span>
+
+            </div>
+
+            <div class="slider-container">
+
+                <input
+                    type="range"
+                    id="voiceSpeed"
+                    min="50"
+                    max="150"
+                    value="100">
+
+                <strong id="voiceSpeedValue">
+                    1.0x
+                </strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SAFETY CONFIGURATION -->
+
+    <section class="card">
+
+        <div class="card-header">
+
+            <div>
+
+                <span class="section-label">
+                    SAFETY CONFIGURATION
+                </span>
+
+                <h2>
+                    Alert Controls
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <!-- SPATIAL AUDIO -->
+
+        <div class="toggle-row">
+
+            <div>
+
+                <strong>
+                    Spatial Audio
+                </strong>
+
+                <span>
+                    Enable directional audio guidance
+                </span>
+
+            </div>
+
+            <label class="switch">
+
+                <input
+                    type="checkbox"
+                    id="spatialAudioToggle"
+                    checked>
+
+                <span class="switch-slider"></span>
+
+            </label>
+
+        </div>
+
+
+        <!-- VOICE ALERTS -->
+
+        <div class="toggle-row">
+
+            <div>
+
+                <strong>
+                    Voice Alerts
+                </strong>
+
+                <span>
+                    Enable spoken hazard notifications
+                </span>
+
+            </div>
+
+            <label class="switch">
+
+                <input
+                    type="checkbox"
+                    id="voiceAlertToggle"
+                    checked>
+
+                <span class="switch-slider"></span>
+
+            </label>
+
+        </div>
+
+
+        <!-- CRITICAL ALERTS -->
+
+        <div class="toggle-row">
+
+            <div>
+
+                <strong>
+                    Critical Alerts
+                </strong>
+
+                <span>
+                    Immediate warnings for high-risk objects
+                </span>
+
+            </div>
+
+            <label class="switch">
+
+                <input
+                    type="checkbox"
+                    id="criticalAlertToggle"
+                    checked>
+
+                <span class="switch-slider"></span>
+
+            </label>
+
+        </div>
+
+
+        <!-- SENSITIVITY -->
+
+        <div class="control-row">
+
+            <div class="control-info">
+
+                <strong>
+                    Alert Sensitivity
+                </strong>
+
+                <span>
+                    Controls when warnings are triggered
+                </span>
+
+            </div>
+
+            <select id="alertSensitivity">
+
+                <option value="LOW">
+                    LOW
+                </option>
+
+                <option value="MEDIUM">
+                    MEDIUM
+                </option>
+
+                <option value="HIGH" selected>
+                    HIGH
+                </option>
+
+            </select>
+
+        </div>
+
+    </section>
+
+
+    <!-- LIVE PREVIEW -->
+
+    <section class="card">
+
+        <div class="card-header">
+
+            <div>
+
+                <span class="section-label">
+                    LIVE PREVIEW
+                </span>
+
+                <h2>
+                    Current Audio Configuration
+                </h2>
+
+            </div>
+
+            <span class="live-indicator">
+                ● LIVE
+            </span>
+
+        </div>
+
+
+       <div class="audio-preview">
+
+    <div class="preview-item">
+
+        <span>
+            MASTER VOLUME
+        </span>
+
+        <strong id="previewVolume">
+            70%
+        </strong>
+
+    </div>
+
+
+    <div class="preview-item">
+
+        <span>
+            SPATIAL INTENSITY
+        </span>
+
+        <strong id="previewSpatial">
+            80%
+        </strong>
+
+    </div>
+
+
+    <div class="preview-item">
+
+        <span>
+            VOICE VOLUME
+        </span>
+
+        <strong id="previewVoiceVolume">
+            65%
+        </strong>
+
+    </div>
+
+
+    <div class="preview-item">
+
+        <span>
+            VOICE SPEED
+        </span>
+
+        <strong id="previewSpeed">
+            1.0x
+        </strong>
+
+    </div>
+
+
+    <div class="preview-item">
+
+        <span>
+            SENSITIVITY
+        </span>
+
+        <strong id="previewSensitivity">
+            HIGH
+        </strong>
+
+    </div>
+
+</div>
+
+         
+
+         
+    </section>
+
+
+    <!-- ACTIONS -->
+
+    <div class="page-actions">
+
+        <button
+            class="save-settings-button"
+            id="saveAccessibilityButton">
+
+            ✓ SAVE SETTINGS
+
+        </button>
+
+        <a
+            href="../dashboard.html"
+            class="action-button">
+
+            ← BACK TO DASHBOARD
+
+        </a>
+
+    </div>
+
+</main>
+
+<script src="../js/accessibility.js?v=3"></script>
+
+</body>
+
+</html>

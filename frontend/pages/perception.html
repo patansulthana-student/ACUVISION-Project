@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>ACUVISION | Live Perception</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css">
+
+    <link
+        rel="stylesheet"
+        href="../css/dashboard.css">
+
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css">
+
+</head>
+
+
+<body>
+
+<div class="page-container">
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="page-header">
+
+        <div>
+
+            <span class="eyebrow">
+                REAL-TIME EDGE AI
+            </span>
+
+            <h1>
+                Live <span>Perception</span>
+            </h1>
+
+            <p>
+                Real-time object detection and spatial awareness.
+            </p>
+
+        </div>
+
+
+        <div
+            class="status-badge"
+            id="perceptionStatus">
+
+            <span class="status-dot"></span>
+
+            CHECKING
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         DETECTED ENVIRONMENT
+    ====================================================== -->
+
+    <section class="dashboard-card">
+
+        <div class="card-heading">
+
+            <div>
+
+                <span class="eyebrow">
+                    OBJECT DETECTION
+                </span>
+
+                <h2>
+                    Detected Environment
+                </h2>
+
+            </div>
+
+
+            <span
+                class="live-indicator"
+                id="environmentStatus">
+
+                ● LIVE
+
+            </span>
+
+        </div>
+
+
+        <!-- TABLE HEADER -->
+
+        <div class="perception-table">
+
+            <div class="table-header">
+
+                <span>
+                    OBJECT
+                </span>
+
+                <span>
+                    CONFIDENCE
+                </span>
+
+                <span>
+                    DIRECTION
+                </span>
+
+                <span>
+                    PROXIMITY
+                </span>
+
+                <span>
+                    PRIORITY
+                </span>
+
+            </div>
+
+
+            <!-- REAL DETECTIONS WILL BE INSERTED HERE -->
+
+            <div id="perceptionRows">
+
+                <div class="object-row">
+
+                    <span class="object-name">
+                        Waiting for detection...
+                    </span>
+
+                    <span>
+                        —
+                    </span>
+
+                    <span>
+                        —
+                    </span>
+
+                    <span>
+                        —
+                    </span>
+
+                    <span>
+                        —
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SPATIAL MAP
+    ====================================================== -->
+
+    <section class="dashboard-card">
+
+        <div class="card-heading">
+
+            <div>
+
+                <span class="eyebrow">
+                    SPATIAL POSITION
+                </span>
+
+                <h2>
+                    Object Direction Map
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="spatial-map"
+            id="spatialMap">
+
+
+            <div class="map-label left-label">
+                LEFT
+            </div>
+
+
+            <!-- LEFT OBJECTS -->
+
+            <div
+                class="map-zone map-left-zone"
+                id="mapLeftZone">
+
+            </div>
+
+
+            <!-- CENTER OBJECTS -->
+
+            <div
+                class="map-zone map-center-zone"
+                id="mapCenterZone">
+
+            </div>
+
+
+            <!-- RIGHT OBJECTS -->
+
+            <div
+                class="map-zone map-right-zone"
+                id="mapRightZone">
+
+            </div>
+
+
+            <div class="map-label right-label">
+                RIGHT
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SAFETY RESPONSE
+    ====================================================== -->
+
+    <section class="card safety-response-card">
+
+        <div class="card-header">
+
+            <div>
+
+                <span class="section-label">
+                    SAFETY RESPONSE
+                </span>
+
+                <h2>
+                    Detection → Alert
+                </h2>
+
+            </div>
+
+
+            <span
+                id="alertCondition"
+                class="response-status">
+
+                CHECKING
+
+            </span>
+
+        </div>
+
+
+        <div class="response-content">
+
+
+            <div class="response-object">
+
+                <span class="response-label">
+                    PRIMARY DETECTION
+                </span>
+
+
+                <strong id="primaryDetection">
+                    Waiting...
+                </strong>
+
+
+                <span id="primaryDetectionDetails">
+                    Waiting for live detection
+                </span>
+
+            </div>
+
+
+            <div class="response-arrow">
+                →
+            </div>
+
+
+            <div class="response-alert">
+
+                <span class="response-label">
+                    NEXT ACTION
+                </span>
+
+
+                <strong>
+                    ALERT MONITOR
+                </strong>
+
+
+                <span>
+                    High-priority detection monitoring
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="response-actions">
+
+            <a
+                href="alerts.html"
+                id="viewAlertButton"
+                class="alert-link">
+
+                VIEW ALERT →
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ACTIONS
+    ====================================================== -->
+
+    <div class="page-actions">
+
+        <a
+            href="../dashboard.html"
+            class="action-button">
+
+            ← Back to Dashboard
+
+        </a>
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script src="../js/api.js"></script>
+
+<script src="../js/perception.js?v=3"></script>
+
+
+</body>
+
+</html>

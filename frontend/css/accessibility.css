@@ -1,0 +1,501 @@
+
+/* =========================================================
+   ACUVISION — ACCESSIBILITY CONTROL CENTER
+========================================================= */
+
+.accessibility-page {
+    width: min(1180px, 94%);
+    margin: 0 auto;
+    padding: 35px 0 55px;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.accessibility-page .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 24px;
+}
+
+.accessibility-page .page-header h1 {
+    margin: 6px 0 8px;
+    font-size: 36px;
+    line-height: 1.1;
+    color: #f5f9ff;
+}
+
+.accessibility-page .page-header p {
+    margin: 0;
+    color: #7891a7;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.accessibility-page .section-label {
+    color: #00e5ff;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+}
+
+
+/* =========================================================
+   THE 3 MAIN CARDS
+========================================================= */
+
+.accessibility-page > .card {
+    width: 100%;
+    margin: 0 0 16px;
+    padding: 24px;
+
+    border: 1px solid #1a3b55;
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(14, 31, 49, 0.98),
+            rgba(7, 20, 33, 0.98)
+        );
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+.accessibility-page > .card:last-of-type {
+    margin-bottom: 0;
+}
+
+.accessibility-page .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    margin-bottom: 10px;
+}
+
+.accessibility-page .card-header h2 {
+    margin: 5px 0 0;
+    color: #edf8ff;
+    font-size: 19px;
+}
+
+
+/* =========================================================
+   HORIZONTAL CONTROL ROW
+   ========================================================= */
+
+.accessibility-page .control-row {
+    display: grid;
+
+    /*
+       Column 1 = setting name
+       Column 2 = description
+       Column 3 = slider/select
+    */
+    grid-template-columns: 190px minmax(180px, 1fr) 320px;
+
+    align-items: center;
+
+    column-gap: 20px;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid rgba(132, 162, 184, 0.10);
+}
+
+.accessibility-page .control-row:last-child {
+    border-bottom: none;
+}
+
+
+/* Setting text */
+
+.accessibility-page .control-info {
+    min-width: 0;
+}
+
+.accessibility-page .control-info strong {
+    display: block;
+
+    color: #e8f4fb;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.accessibility-page .control-info span {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #6f879d;
+
+    font-size: 10px;
+    line-height: 1.45;
+}
+
+
+/* =========================================================
+   SLIDERS
+========================================================= */
+
+.accessibility-page .slider-container {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    gap: 12px;
+}
+
+.accessibility-page .slider-container input[type="range"] {
+    flex: 1;
+
+    min-width: 0;
+    width: 100%;
+
+    accent-color: #00d9ff;
+
+    cursor: pointer;
+}
+
+.accessibility-page .slider-container strong {
+    min-width: 46px;
+
+    color: #00d9ff;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    text-align: right;
+}
+
+
+/* =========================================================
+   SAFETY TOGGLE ROW
+========================================================= */
+
+.accessibility-page .toggle-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid rgba(132, 162, 184, 0.10);
+}
+
+.accessibility-page .toggle-row:last-child {
+    border-bottom: none;
+}
+
+.accessibility-page .toggle-row > div:first-child {
+    min-width: 0;
+}
+
+.accessibility-page .toggle-row strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #e8f4fb;
+
+    font-size: 14px;
+}
+
+.accessibility-page .toggle-row span:not(.switch-slider) {
+    color: #6f879d;
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   TOGGLE SWITCH
+========================================================= */
+
+.accessibility-page .switch {
+    position: relative;
+
+    width: 50px;
+    height: 28px;
+
+    flex-shrink: 0;
+}
+
+.accessibility-page .switch input {
+    position: absolute;
+
+    width: 0;
+    height: 0;
+
+    opacity: 0;
+}
+
+.accessibility-page .switch-slider {
+    position: absolute;
+    inset: 0;
+
+    border-radius: 30px;
+
+    background: #193248;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.accessibility-page .switch-slider::before {
+    content: "";
+
+    position: absolute;
+
+    width: 20px;
+    height: 20px;
+
+    left: 4px;
+    top: 4px;
+
+    border-radius: 50%;
+
+    background: #71879a;
+
+    transition: 0.25s ease;
+}
+
+.accessibility-page .switch input:checked
++ .switch-slider {
+    background: rgba(0, 217, 255, 0.25);
+}
+
+.accessibility-page .switch input:checked
++ .switch-slider::before {
+    transform: translateX(22px);
+
+    background: #00d9ff;
+
+    box-shadow:
+        0 0 10px rgba(0, 217, 255, 0.5);
+}
+
+
+/* =========================================================
+   SENSITIVITY SELECT
+========================================================= */
+
+.accessibility-page #alertSensitivity {
+    width: 100%;
+    min-width: 0;
+
+    padding: 11px 14px;
+
+    border: 1px solid #294c65;
+    border-radius: 9px;
+
+    outline: none;
+
+    background: #071827;
+    color: #eaf7fd;
+
+    font-size: 11px;
+
+    cursor: pointer;
+}
+
+.accessibility-page #alertSensitivity:focus {
+    border-color: #00d9ff;
+}
+
+
+/* =========================================================
+   LIVE PREVIEW
+========================================================= */
+
+.accessibility-page .audio-preview {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 12px;
+
+    margin-top: 18px;
+}
+
+.accessibility-page .preview-item {
+    min-width: 0;
+
+    padding: 17px;
+
+    border: 1px solid #193b54;
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #091b2d,
+            #061421
+        );
+}
+
+.accessibility-page .preview-item span {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #668199;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
+}
+
+.accessibility-page .preview-item strong {
+    color: #00d9ff;
+
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+.accessibility-page .page-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 18px;
+}
+
+.accessibility-page .save-settings-button {
+    padding: 12px 18px;
+
+    border: 1px solid #00d9ff;
+    border-radius: 9px;
+
+    background: #00d9ff;
+    color: #04121d;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.accessibility-page .save-settings-button:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 8px 22px rgba(0, 217, 255, 0.16);
+}
+
+.accessibility-page .action-button {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 12px 18px;
+
+    border: 1px solid #294c65;
+    border-radius: 9px;
+
+    background: #081a2a;
+
+    color: #9bb4c7;
+
+    text-decoration: none;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    transition: 0.2s ease;
+}
+
+.accessibility-page .action-button:hover {
+    border-color: #00d9ff;
+    color: #00d9ff;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .accessibility-page .control-row {
+        grid-template-columns:
+            170px
+            minmax(140px, 1fr)
+            260px;
+
+        column-gap: 15px;
+    }
+
+}
+
+
+@media (max-width: 750px) {
+
+    .accessibility-page .control-row {
+        grid-template-columns: 1fr;
+        row-gap: 10px;
+    }
+
+    .accessibility-page .control-info strong {
+        white-space: normal;
+    }
+
+    .accessibility-page .slider-container {
+        width: 100%;
+    }
+
+    .accessibility-page .audio-preview {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    .accessibility-page {
+        width: 92%;
+        padding-top: 25px;
+    }
+
+    .accessibility-page .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .accessibility-page .audio-preview {
+        grid-template-columns: 1fr;
+    }
+
+    .accessibility-page .page-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .accessibility-page .save-settings-button,
+    .accessibility-page .action-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+}

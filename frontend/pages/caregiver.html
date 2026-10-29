@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>ACUVISION | Caregiver Monitor</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css">
+
+    <link
+        rel="stylesheet"
+        href="../css/dashboard.css">
+
+    <link
+        rel="stylesheet"
+        href="../css/caregiver.css">
+
+</head>
+
+
+<body>
+
+<main class="page-container caregiver-page">
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="page-header">
+
+        <div>
+
+            <span class="section-label">
+                CAREGIVER MONITORING
+            </span>
+
+            <h1>
+                Caregiver <span>Monitor</span>
+            </h1>
+
+            <p class="subtitle">
+                Monitor the user's navigation system and current safety state.
+            </p>
+
+        </div>
+
+
+        <div
+            class="status-badge"
+            id="caregiverSystemStatus">
+
+            <span class="status-dot"></span>
+
+            CHECKING
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         CURRENT HAZARD
+    ====================================================== -->
+
+    <section class="card caregiver-main-alert">
+
+        <div class="card-header">
+
+            <div>
+
+                <span class="section-label">
+                    CURRENT HAZARD
+                </span>
+
+
+                <h2 id="caregiverObject">
+                    Waiting...
+                </h2>
+
+            </div>
+
+
+            <span
+                class="caregiver-severity"
+                id="caregiverSeverity">
+
+                —
+
+            </span>
+
+        </div>
+
+
+        <div class="caregiver-alert-content">
+
+            <div class="caregiver-warning-icon">
+                !
+            </div>
+
+
+            <div>
+
+                <strong id="caregiverMessage">
+                    Waiting for live safety information...
+                </strong>
+
+
+                <span id="caregiverAlertTime">
+                    No current alert
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="caregiver-metrics">
+
+
+            <div class="caregiver-metric">
+
+                <span>
+                    CONFIDENCE
+                </span>
+
+                <strong id="caregiverConfidence">
+                    —
+                </strong>
+
+            </div>
+
+
+            <div class="caregiver-metric">
+
+                <span>
+                    DIRECTION
+                </span>
+
+                <strong id="caregiverDirection">
+                    —
+                </strong>
+
+            </div>
+
+
+            <div class="caregiver-metric">
+
+                <span>
+                    PROXIMITY
+                </span>
+
+                <strong id="caregiverProximity">
+                    —
+                </strong>
+
+            </div>
+
+
+            <div class="caregiver-metric">
+
+                <span>
+                    THREAT
+                </span>
+
+                <strong id="caregiverThreat">
+                    —
+                </strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SYSTEM STATUS
+    ====================================================== -->
+
+    <section class="caregiver-status-grid">
+
+
+        <!-- AI -->
+
+        <div class="card status-card">
+
+            <span class="section-label">
+                AI ENGINE
+            </span>
+
+
+            <strong
+                class="online-value"
+                id="caregiverAIStatus">
+
+                ● CHECKING
+
+            </strong>
+
+
+            <p id="caregiverAIDescription">
+                Checking object perception.
+            </p>
+
+        </div>
+
+
+
+        <!-- CAMERA -->
+
+        <div class="card status-card">
+
+            <span class="section-label">
+                CAMERA
+            </span>
+
+
+            <strong
+                class="online-value"
+                id="caregiverCameraStatus">
+
+                ● CHECKING
+
+            </strong>
+
+
+            <p id="caregiverCameraDescription">
+                Checking visual input.
+            </p>
+
+        </div>
+
+
+
+        <!-- SPATIAL AUDIO -->
+
+        <div class="card status-card">
+
+            <span class="section-label">
+                SPATIAL AUDIO
+            </span>
+
+
+            <strong
+                class="online-value"
+                id="caregiverAudioStatus">
+
+                ● NOT VERIFIED
+
+            </strong>
+
+
+            <p id="caregiverAudioDescription">
+                Audio output status not verified.
+            </p>
+
+        </div>
+
+
+
+        <!-- VOICE -->
+
+        <div class="card status-card">
+
+            <span class="section-label">
+                VOICE ENGINE
+            </span>
+
+
+            <strong
+                class="online-value"
+                id="caregiverVoiceStatus">
+
+                ● NOT VERIFIED
+
+            </strong>
+
+
+            <p id="caregiverVoiceDescription">
+                Voice output status not verified.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         RECENT ALERTS
+    ====================================================== -->
+
+    <section class="card caregiver-recent-alerts">
+
+        <div class="card-header">
+
+            <div>
+
+                <span class="section-label">
+                    SAFETY HISTORY
+                </span>
+
+
+                <h2>
+                    Recent Alerts
+                </h2>
+
+            </div>
+
+
+            <a
+                href="alerts.html"
+                class="caregiver-view-link">
+
+                VIEW ALL →
+
+            </a>
+
+        </div>
+
+
+        <div
+            id="caregiverAlertList"
+            class="caregiver-alert-list">
+
+            <div class="caregiver-alert-item">
+
+                Loading recent alerts...
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ACTIONS
+    ====================================================== -->
+
+    <div class="caregiver-actions">
+
+
+        <a
+            href="accessibility.html"
+            class="caregiver-action">
+
+            ACCESSIBILITY CONTROLS
+
+        </a>
+
+
+        <a
+            href="device-health.html"
+            class="caregiver-action">
+
+            DEVICE HEALTH
+
+        </a>
+
+
+        <a
+            href="../dashboard.html"
+            class="caregiver-back">
+
+            ← BACK TO DASHBOARD
+
+        </a>
+
+    </div>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+<script src="../js/api.js"></script>
+<script src="../js/caregiver.js?v=3"></script>
+
+
+</body>
+
+</html>

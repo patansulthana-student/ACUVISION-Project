@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>ACUVISION | Spatial Audio</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css">
+
+    <link
+        rel="stylesheet"
+        href="../css/dashboard.css">
+
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css">
+
+</head>
+
+
+<body>
+
+<main class="page-container">
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="page-header">
+
+        <div>
+
+            <span class="section-label">
+                AUDIO GUIDANCE
+            </span>
+
+            <h1>
+                Spatial Audio
+            </h1>
+
+            <p class="subtitle">
+                Real-time directional audio guidance based on object position.
+            </p>
+
+        </div>
+
+
+        <div
+            class="status-badge"
+            id="audioStatus">
+
+            <span class="status-dot"></span>
+
+            CHECKING
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN SPATIAL AUDIO
+    ====================================================== -->
+
+    <section class="card spatial-audio-main">
+
+        <div class="card-header">
+
+            <div>
+
+                <span class="section-label">
+                    DIRECTIONAL AUDIO
+                </span>
+
+                <h2>
+                    3D Spatial Position
+                </h2>
+
+            </div>
+
+
+            <span
+                class="live-indicator"
+                id="liveIndicator">
+
+                ● LIVE
+
+            </span>
+
+        </div>
+
+
+
+        <!-- =================================================
+             DIRECTION TRACK
+        ================================================== -->
+
+        <div class="audio-direction">
+
+            <div class="direction-label left">
+                LEFT
+            </div>
+
+
+            <div class="direction-track">
+
+                <div
+                    class="direction-marker"
+                    id="directionMarker">
+                </div>
+
+            </div>
+
+
+            <div class="direction-label right">
+                RIGHT
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             OBJECT INFORMATION
+        ================================================== -->
+
+        <div class="audio-object-info">
+
+
+            <div class="info-box">
+
+                <span>
+                    DETECTED OBJECT
+                </span>
+
+                <strong id="audioObject">
+                    Waiting...
+                </strong>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <span>
+                    DIRECTION
+                </span>
+
+                <strong id="audioDirection">
+                    —
+                </strong>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <span>
+                    PROXIMITY
+                </span>
+
+                <strong id="audioProximity">
+                    —
+                </strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         EAR BALANCE
+    ====================================================== -->
+
+    <section class="card ear-balance">
+
+        <div class="card-header">
+
+            <div>
+
+                <span class="section-label">
+                    BINAURAL BALANCE
+                </span>
+
+                <h2>
+                    Left / Right Ear Distribution
+                </h2>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- LEFT EAR -->
+
+        <div class="ear-row">
+
+            <div class="ear-name">
+                LEFT EAR
+            </div>
+
+
+            <div class="ear-bar">
+
+                <div
+                    class="ear-fill left-ear"
+                    id="leftEarFill"
+                    style="width:0%">
+                </div>
+
+            </div>
+
+
+            <div
+                class="ear-value"
+                id="leftEarValue">
+
+                0%
+
+            </div>
+
+        </div>
+
+
+
+        <!-- RIGHT EAR -->
+
+        <div class="ear-row">
+
+            <div class="ear-name">
+                RIGHT EAR
+            </div>
+
+
+            <div class="ear-bar">
+
+                <div
+                    class="ear-fill right-ear"
+                    id="rightEarFill"
+                    style="width:0%">
+                </div>
+
+            </div>
+
+
+            <div
+                class="ear-value"
+                id="rightEarValue">
+
+                0%
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         AUDIO GUIDANCE
+    ====================================================== -->
+
+    <section class="card guidance-card">
+
+        <span class="section-label">
+            AUDIO GUIDANCE
+        </span>
+
+
+        <div
+            class="guidance-message"
+            id="guidanceMessage">
+
+            Waiting for live object detection...
+
+        </div>
+
+
+        <div class="audio-wave">
+
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         EXPO DEMO
+    ====================================================== -->
+
+    <section class="card demo-controls">
+
+        <div class="card-header">
+
+            <div>
+
+                <span class="section-label">
+                    EXPO DEMO
+                </span>
+
+                <h2>
+                    Test Directional Audio
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="direction-buttons">
+
+
+            <button
+                type="button"
+                class="audio-demo-btn"
+                onclick="testAudioDirection('LEFT')">
+
+                ◀ LEFT
+
+            </button>
+
+
+            <button
+                type="button"
+                class="audio-demo-btn"
+                onclick="testAudioDirection('CENTER')">
+
+                ● CENTER
+
+            </button>
+
+
+            <button
+                type="button"
+                class="audio-demo-btn"
+                onclick="testAudioDirection('RIGHT')">
+
+                RIGHT ▶
+
+            </button>
+
+        </div>
+
+
+        <p class="demo-note">
+            These buttons test the actual directional audio and
+            voice output through the ACUVISION backend.
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         BACK TO DASHBOARD
+    ====================================================== -->
+
+    <div class="page-navigation">
+
+        <a
+            href="../dashboard.html">
+
+            ← Back to Dashboard
+
+        </a>
+
+    </div>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script src="../js/api.js"></script>
+
+<script src="../js/audio-visualizer.js?v=2"></script>
+
+
+</body>
+
+</html>
