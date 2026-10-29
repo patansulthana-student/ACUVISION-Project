@@ -7,7 +7,7 @@
 from flask import Flask, jsonify, Response, request
 from flask_cors import CORS
 
-from core.engine import AcuVisionEngine
+from backend.core.engine import AcuVisionEngine
 from core.audio import SpatialAudioEngine
 from core.voice import VoiceEngine
 
