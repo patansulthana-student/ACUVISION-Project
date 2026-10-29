@@ -8,8 +8,8 @@ from flask import Flask, jsonify, Response, request
 from flask_cors import CORS
 
 from backend.core.engine import AcuVisionEngine
-from core.audio import SpatialAudioEngine
-from core.voice import VoiceEngine
+from backend.core.audio import SpatialAudioEngine
+from backend.core.voice import VoiceEngine
 
 import config
 import threading
@@ -1648,3 +1648,5 @@ if __name__ == "__main__":
         threaded=True
 
     )
+
+
